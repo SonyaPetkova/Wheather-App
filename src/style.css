@@ -61,3 +61,7 @@ footer {
   margin: 0 auto;
   text-align: center;
 }
+li.first-letter{
+  text-transform: capitalize;
+
+}
