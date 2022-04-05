@@ -10,11 +10,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <link
-      rel="stylesheet"
-      href="chrome-extension://jabopobgcpjmedljpbcaablpmlmfcogm/wf.css"
-    />
+
     <title>Wheather</title>
   </head>
   <body>
@@ -22,10 +20,13 @@
       <div class="wheather-info">
         <div class="row">
           <div class="col-6">
-            <h1>New York</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li>Wednesday 12:01, clear sky</li>
-              <li>Humidity: <span> 46%</span>, Wind: <span>2.68km/h</span></li>
+              <li>Wednesday 12:01,<span id="description"></span></li>
+              <li>
+                Humidity: <span id="humidity"> </span><span>%</span>, Wind:
+                <span id="wind"></span><span> km/h</span>
+              </li>
             </ul>
           </div>
           <div class="col-6" id="temp">
@@ -33,16 +34,16 @@
               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
               alt="cloudy"
             />
-            2 <span id="degrees">°C/°F</span>
+            <span id="temperature">12</span> <span id="degrees">°C/°F</span>
           </div>
         </div>
       </div>
-      <small>
+      <footer>
         <a href="https://github.com/SonyaPetkova/Wheather-App" target="_blank">
           Open-source code</a
         >
-        by Sonya Petkova</small
-      >
+        by Sonya Petkova
+      </footer>
     </div>
 
     <script src="src/js.js"></script>
