@@ -48,12 +48,13 @@ h1 {
 }
 
 #degrees {
+  
   font-weight: 400;
   font-size: 28px;
   margin-top: -20px;
 }
 img {
-  margin-right: 20px;
+  margin-right: 0px;
 }
 
 footer {

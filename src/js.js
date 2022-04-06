@@ -22,9 +22,10 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 function displayTemp(response) {
-  console.log(response.data);
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(response.data.main.temp);
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
@@ -33,10 +34,16 @@ function displayTemp(response) {
   cityElement.innerHTML = response.data.name;
   let dataElement = document.querySelector("#date");
   dataElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
+let city = "Sofia";
 let apiKey = "34a4206d301517fba52add27cb8eade5";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Sofia&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 console.log(apiUrl);
 
