@@ -59,6 +59,7 @@ h1 {
   font-weight: 400;
   font-size: 28px;
   margin-top: -20px;
+  
 }
 img {
   margin-right: 0px;
@@ -75,4 +76,22 @@ li.first-letter{
 }
 form{
   padding-top: 30px;
+}
+
+#celsius-link{
+  text-decoration: none;
+}
+#fahrenheit-link{
+  text-decoration: none;
+}
+.active{
+color: black;
+cursor: default;
+text-decoration: none;
+}
+.active:hover{
+  color: black;
+cursor: default;
+  text-decoration: none;
+
 }
