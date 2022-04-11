@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   display: block;
-  font-family:font-family: 'Changa', sans-serif;
+  font-family:font-family; 'Changa', sans-serif;
   color:  #878787;
   font-size: 1rem;
   font-weight: 400;
@@ -98,9 +98,11 @@ cursor: default;
 .weather-forecast{
   margin-top: 20px;
   text-align: center;
+   padding-bottom: 50px;
 }
 .weather-forecast-date{
   font-size: 16px;
+ 
 
 
 }
